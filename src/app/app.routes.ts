@@ -8,5 +8,11 @@ export const routes: Routes = [
         //short syntax
         loadComponent: () => import('./pages/page-one.component'),
         canActivate: [canViewGuard()]
+    },
+    {
+        path: 'page-one/:detailsId',
+        //short syntax
+        loadComponent: () => import('./pages/page-one-details.component'),
+        canActivate: [canViewGuard()]
     }
 ];
