@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "routig-and-signals": {
+    "routing-and-signals": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/routig-and-signals",
+            "outputPath": "dist/routing-and-signals",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "routig-and-signals:build:production"
+              "buildTarget": "routing-and-signals:build:production"
             },
             "development": {
-              "buildTarget": "routig-and-signals:build:development"
+              "buildTarget": "routing-and-signals:build:development"
             }
           },
           "defaultConfiguration": "development"
