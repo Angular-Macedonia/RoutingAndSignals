@@ -2,6 +2,7 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withDebugTracing } from '@angular/router';
 
 import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -10,5 +11,5 @@ export const appConfig: ApplicationConfig = {
       routes, 
       withComponentInputBinding(),
       withDebugTracing() 
-    )]
+    ), provideAnimationsAsync()]
 };

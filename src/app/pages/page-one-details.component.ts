@@ -1,4 +1,5 @@
-import { Component, input } from "@angular/core";
+import { Component, inject, input } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: 'page-one-details',
@@ -13,6 +14,15 @@ import { Component, input } from "@angular/core";
 
     ]
 })
-export default class PageOneDetailsComponent {
+export class PageOneDetailsComponent {
     detailsId = input.required();
+
+    private route = inject(ActivatedRoute);
+
+    ngOnInit(): void {
+      const id = Number(this.route.snapshot.paramMap.get('detailsId'));
+      if (id) {
+        console.log(id)
+      }
+    }
 }

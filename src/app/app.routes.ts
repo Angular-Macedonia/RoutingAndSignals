@@ -20,7 +20,7 @@ export const routes: Routes = [
     {
         path: 'page-one/:detailsId',
         //short syntax
-        loadComponent: () => import('./pages/page-one-details.component'),
+        loadComponent: () => import('./pages/page-one-details.component').then(m => m.PageOneDetailsComponent),
         canActivate: [isLoggedInUserGuard]
     }
 ];
